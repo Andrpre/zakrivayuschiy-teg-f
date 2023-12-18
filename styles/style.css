@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -14,7 +13,192 @@
 
 */
 
+.width-container {
+    max-inline-size: clamp(23.4375rem, 16.3732rem + 30.1408vw, 43.5rem);
+    margin: auto;
+}
+
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+    min-inline-size: 320px;
+    min-block-size: 100dvb;
+    font-family: var(--main-font, Arial);
+    font-variation-settings: "wght" var(--weight-font-text);
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    background-image: var(--background-image);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    padding-block-start: 102px;
+    padding-block-end: 102px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--pixel-font, Arial);
+    background-color: var(--background-color);
+    outline: var(--border);
+    padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem) 25px;
+    text-transform: uppercase;
+}
+
+.header__logo {
+    font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    text-decoration: none;
+}
+
+.header__title {
+    font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    margin: 20px 0 25px;
+}
+
+.header__theme-menu{
+    position: relative;
+    inset-inline-start: 9px;
+}
+
+.theme-menu__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.theme-menu__item{
+    font-size: 14px;
+}
+
+.theme-menu__button {
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-transform: inherit;
+}
+
+.theme-menu__button:disabled {
+    opacity: 0.6;
+    position: relative;
+    pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+    content: "▶";
+    position: absolute;
+    inset-inline-start: -20px;
+}
+
+.main_margin {
+    margin-block-start: 104px;
+    margin-block-end: 54px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3.125rem, 3.037rem + 0.3756vw, 3.375rem);
+}
+
+.card {
+    background-color: var(--background-color);
+    outline: var(--border);
+}
+
+.card__title {
+    padding: 6px 10px;
+    font-size: 18px;
+    font-variation-settings: "wght" var(--weight-font-title);
+}
+
+.card__container-img {
+    position: relative;
+}
+
+.card__label {
+    position: absolute;
+    inset-inline-end: 25px;
+    inset-block-start: 25px;
+    font-family: var(--pixel-font);
+    font-size: 14px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    mix-blend-mode: hard-light;
+}
+
+.card__label {
+    text-shadow:
+    -1px 0 var(--border-label), 
+    0 1px var(--border-label), 
+    1px 0 var(--border-label), 
+    0 -1px var(--border-label);
+}
+
+@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+    .card__label {
+        -webkit-text-stroke: 1px var(--border-label);
+        text-stroke: 1px var(--border-label);
+        text-shadow: none;
+    }
+}
+
+.card__image {
+    width: 100%;
+    outline: var(--border);
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+}
+
+.card__text{
+    font-size: 18px;
+    line-height: 1.16667;
+}
+
+.card__buttons{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 12px;
+}
+
+.card__icon-button,
+.card__like-button {
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+.card__icon-button{
+    block-size: 24px;
+}
+
+.card__like-button{
+    outline: var(--border);
+    padding: 9px 17px;
+    font-family: var(--pixel-font, Arial);
+    font-size: 14px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__button-save{
+    font-family: var(--pixel-font);
+    font-size: 14px;
+    line-height: 0.9;
+    background-color: var(--background-color);
+    border: var(--border);
+    padding: 18.5px 21px;
+    cursor: pointer;
+}
+
+.footer__button-save-icon{
+    inline-size: 21px;
 }
