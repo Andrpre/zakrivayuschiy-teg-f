@@ -18,6 +18,8 @@
         linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a)
     ;
     --border-label: #fff;
+    --difference-color: #fff;
+    --contour-color: #000;
 }
 
 :root.theme-dark {
@@ -33,6 +35,8 @@
         linear-gradient(to bottom, #007f0c, #004306)
     ;
     --border-label: #000;
+    --difference-color: #00cc14;
+    --contour-color: #00cc14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,5 +53,7 @@
             linear-gradient(to bottom, #007f0c, #004306)
         ;
         --border-label: #000;
+        --difference-color: #00cc14;
+        --contour-color: #00cc14;
     }
 }

@@ -13,4 +13,7 @@
     ;
     --border: 2px solid var(--accent-color);
     --border-label: #fff;
+    --difference-color: #fff;
+    --contour-color: #000;
+    --filling-color: #FF0000;
 }
