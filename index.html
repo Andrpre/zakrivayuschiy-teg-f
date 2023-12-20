@@ -60,7 +60,7 @@
                                 </svg>
                                     
                             </button>
-                            <button class="card__like-button">
+                            <button class="card__like-button button">
                                 <span class="button__text">Like</span>
                             </button>
                         </div>
@@ -69,12 +69,30 @@
             </article>
         </main>
         <footer class="footer">
-            <button class="footer__button-save">
+            <button
+                class="footer__button-save button" 
+                type="button" 
+                onclick="window['dialog'].showModal()" 
+                aria-controls="dialog"
+            >
                 <svg class="footer__button-save-icon" viewBox="0 0 21 21">
                     <use href="./images/floppy.svg#floppy">
                 </svg>
                 <span class="button__text">Сохранить на память</span>
             </button>
+            <dialog class="modal" id="dialog">
+                <div class="modal__container">
+                    <svg class="footer__button-save-icon" viewBox="0 0 21 21">
+                        <use href="./images/floppy.svg#floppy">
+                    </svg>
+                    <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
+                </div>
+                <form method="dialog">
+                    <button class="modal__close-button button">
+                        <span class="button__text">ок</span>
+                    </button>
+                </form>
+            </dialog>
         </footer>
         <script src="./scripts/like.js"></script>
     </body>
