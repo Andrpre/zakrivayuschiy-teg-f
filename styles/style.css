@@ -76,7 +76,7 @@
     border: none;
     cursor: pointer;
     text-transform: inherit;
-    transition: 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:focus {
@@ -95,7 +95,7 @@
     background-color: var(--accent-color);
     transform: scaleX(0);
     transform-origin: left;
-    transition: 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -136,7 +136,7 @@
 .main {
     display: flex;
     flex-direction: column;
-    gap: clamp(3.125rem, 3.037rem + 0.3756vw, 3.375rem);
+    gap: 50px;
 }
 
 .card {
@@ -160,7 +160,6 @@
     inset-block-start: 25px;
     font-family: var(--pixel-font);
     font-size: 14px;
-    text-transform: uppercase;
     opacity: 0.5;
     mix-blend-mode: hard-light;
 }
@@ -210,7 +209,7 @@
 
 .card__icon-button {
     block-size: 33px;
-    transition: 0.3s ease;
+    transition: outline 0.3s ease;
     outline: 2px transparent solid;
 }
 
@@ -237,7 +236,7 @@
   border: var(--border);
   cursor: pointer;
   position: relative;
-  transition: 0.3s;
+  transition: box-shadow 0.3s;
 }
 
 .button:focus {
@@ -377,6 +376,8 @@
   color: var(--accent-color);
   padding: 30px;
   inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
+  border: var(--border);
+  max-width: none;
 }
 
 .modal::backdrop {
@@ -386,6 +387,7 @@
 
 .modal__container{
     display: grid;
+    align-items: center;
     gap: 20px;
     grid-template-columns: min-content 1fr;
 }
@@ -404,8 +406,9 @@
 .modal__close-button{
   block-size: 38px;
   inline-size: 100%;
-  font-size: inherit;
+  font-size: 14px;
   color: inherit;
+  text-transform: uppercase;
 }
 
 @media (width <= 375px) {
@@ -417,7 +420,7 @@
         inline-size: 28px;
     }
 
-    .modal {
+    .modal[open] {
       padding: 30px 40px;
     }
 }
