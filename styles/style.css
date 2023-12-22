@@ -47,6 +47,12 @@
 .header__logo {
     font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
     text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.header__logo:focus {
+    outline: none;
+    opacity: 0.6;
 }
 
 .header__title {
@@ -156,8 +162,8 @@
 
 .card__label {
     position: absolute;
-    inset-inline-end: 25px;
-    inset-block-start: 25px;
+    inset-inline-end: clamp(0.6875rem, 0.3794rem + 1.3146vw, 1.5625rem);
+    inset-block-start: clamp(1.4375rem, 1.3935rem + 0.1878vw, 1.5625rem);
     font-family: var(--pixel-font);
     font-size: 14px;
     opacity: 0.5;
@@ -208,7 +214,7 @@
 }
 
 .card__icon-button {
-    block-size: 33px;
+    block-size: 34px;
     transition: outline 0.3s ease;
     outline: 2px transparent solid;
 }
