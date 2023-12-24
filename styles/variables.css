@@ -1,6 +1,7 @@
 :root {
-    --pixel-font: "Press Start 2P", monospace;
-    --main-font: "Inter", Arial;
+    --accent-font: "Press Start 2P", fantasy;
+    --primary-font: "Inter", sans-serif;
+    font-family: sans-serif;
     --weight-font-title: 700;
     --weight-font-text: 400;
     --background-color: #fff;
@@ -10,7 +11,6 @@
         repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
         linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a);
     --border: 2px solid var(--accent-color);
-    --border-label: #fff;
     --difference-color: #fff;
     --contour-color: #000;
     --filling-color: #FF0000;
