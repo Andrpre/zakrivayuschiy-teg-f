@@ -1,13 +1,4 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
-
 :root.theme-light {
-    --pixel-font: "Press Start 2P", monospace;
-    --main-font: "Inter", Arial;
     --weight-font-title: 700;
     --weight-font-text: 400;
     --background-color: #fff;
@@ -15,16 +6,13 @@
     --background-image:
         repeating-linear-gradient(to left, #d3d3d3 0 2px, transparent 2px 4px),
         repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
-        linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a)
-    ;
+        linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a);
     --border-label: #fff;
     --difference-color: #fff;
     --contour-color: #000;
 }
 
 :root.theme-dark {
-    --pixel-font: "Press Start 2P", monospace;
-    --main-font: "Inter", Arial;
     --weight-font-title: 785;
     --weight-font-text: 465;
     --background-color: #000;
@@ -32,8 +20,7 @@
     --background-image:
         repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
         repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
-        linear-gradient(to bottom, #007f0c, #004306)
-    ;
+        linear-gradient(to bottom, #007f0c, #004306);
     --border-label: #000;
     --difference-color: #00cc14;
     --contour-color: #00cc14;
@@ -41,8 +28,6 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --pixel-font: "Press Start 2P", monospace;
-        --main-font: "Inter", Arial;
         --weight-font-title: 785;
         --weight-font-text: 465;
         --background-color: #000;
@@ -50,8 +35,7 @@
         --background-image:
             repeating-linear-gradient(to left, #000 0 2px, transparent 2px 4px),
             repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
-            linear-gradient(to bottom, #007f0c, #004306)
-        ;
+            linear-gradient(to bottom, #007f0c, #004306);
         --border-label: #000;
         --difference-color: #00cc14;
         --contour-color: #00cc14;
